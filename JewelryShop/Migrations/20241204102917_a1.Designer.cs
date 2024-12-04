@@ -11,15 +11,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JewelryShop.Migrations
 {
     [DbContext(typeof(JewerlyContext))]
-    [Migration("20241201101501_Classes1")]
-    partial class Classes1
+    [Migration("20241204102917_a1")]
+    partial class a1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -51,7 +51,7 @@ namespace JewelryShop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("JewelryID"));
 
-                    b.Property<string>("JeweleryName")
+                    b.Property<string>("JewelryName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Material")
@@ -77,6 +77,9 @@ namespace JewelryShop.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ReviewerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rewiew")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("StarAmount")

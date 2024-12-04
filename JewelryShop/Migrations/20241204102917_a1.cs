@@ -5,7 +5,7 @@
 namespace JewelryShop.Migrations
 {
     /// <inheritdoc />
-    public partial class Classes1 : Migration
+    public partial class a1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,7 @@ namespace JewelryShop.Migrations
                 {
                     JewelryID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    JeweleryName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    JewelryName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Material = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -47,7 +47,8 @@ namespace JewelryShop.Migrations
                     JewelryID = table.Column<int>(type: "int", nullable: false),
                     CostumerID = table.Column<int>(type: "int", nullable: false),
                     ReviewerName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    StarAmount = table.Column<int>(type: "int", nullable: false)
+                    StarAmount = table.Column<int>(type: "int", nullable: false),
+                    Rewiew = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
