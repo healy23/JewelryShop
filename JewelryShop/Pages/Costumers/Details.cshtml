@@ -1,0 +1,31 @@
+﻿@page
+@model JewelryShop.Pages.Costumers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Costumer</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Costumer.CostumerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Costumer.CostumerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Costumer.CostumerGmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Costumer.CostumerGmail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Costumer.CostumerID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

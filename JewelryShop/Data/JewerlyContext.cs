@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JewelryShop.Data
 {
-    public class JewerlyContexts: DbContext
+    public class JewerlyContext: DbContext
     {
-        public JewerlyContexts(DbContextOptions<JewerlyContexts> options) : base(options)
+        public JewerlyContext(DbContextOptions<JewerlyContext> options) : base(options)
         {
 
         }
