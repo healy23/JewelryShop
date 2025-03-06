@@ -21,9 +21,17 @@ namespace JewelryShop.Pages.Jewerly
 
         public IList<Jewelry> Jewelry { get;set; } = default!;
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string SearchString)
         {
-            Jewelry = await _context.Jewelrys.ToListAsync();
+            IQueryable<Jewelry> JewelrysIQ = from s in _context.Jewelrys select s;
+            if (!String.IsNullOrEmpty(SearchString))
+            {
+                JewelrysIQ = JewelrysIQ.Where(s => s.Material.Contains(SearchString));
+            }
+
+            Jewelry = await JewelrysIQ.ToListAsync();
+            //Student = await _context.Students.ToListAsync();
+            //Jewelry = await _context.Jewelrys.ToListAsync();
         }
     }
 }

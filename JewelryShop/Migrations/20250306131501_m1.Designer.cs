@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JewelryShop.Migrations
 {
     [DbContext(typeof(JewerlyContext))]
-    [Migration("20241204102917_a1")]
-    partial class a1
+    [Migration("20250306131501_m1")]
+    partial class m1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
