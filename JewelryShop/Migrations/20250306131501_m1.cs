@@ -5,7 +5,7 @@
 namespace JewelryShop.Migrations
 {
     /// <inheritdoc />
-    public partial class a1 : Migration
+    public partial class m1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
