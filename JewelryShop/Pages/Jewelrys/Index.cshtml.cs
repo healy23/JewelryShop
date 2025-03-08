@@ -30,7 +30,7 @@ namespace JewelryShop.Pages.Jewerly
             }
 
             Jewelry = await JewelrysIQ.ToListAsync();
-            //Student = await _context.Students.ToListAsync();
+            
             //Jewelry = await _context.Jewelrys.ToListAsync();
         }
     }
